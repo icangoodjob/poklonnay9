@@ -131,7 +131,6 @@ button {
 	height: calc(18.3px + (55 - 18.3) * ((100vw - 375px) / (1600 - 375)));
 }
 
-
 .ball {
 	position: relative;
 	top: 15px;
