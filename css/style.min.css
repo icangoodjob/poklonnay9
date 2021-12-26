@@ -2208,8 +2208,8 @@ body .ya-share2__badge {
     width: 335px;
     height: 478px;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+/*    top: 50%;
+    transform: translate(-50%, -50%);*/
   }
   .beauty_content-descr {
     width: 335px;

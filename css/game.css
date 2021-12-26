@@ -363,8 +363,6 @@ h3 {
 		width: 4.13px;
 		height: 413px;
 	}
-
-
 	#ball__home {
 		position: absolute;
 		left: 47.47%;
@@ -373,8 +371,6 @@ h3 {
 		width: 4.13px;
 		height: 233px;
 	}
-
-
 	#ball__career {
 		position: absolute;
 		left: 34.63%;
@@ -383,8 +379,6 @@ h3 {
 		width: 4.13%;
 		height: 341px;
 	}
-
-
 	#ball__money {
 		position: absolute;
 		left: 61.07%;
@@ -393,8 +387,6 @@ h3 {
 		width: 4.13px;
 		height: 257px;
 	}
-
-
 	#ball__energe {
 		position: absolute;
 		left: 77.07%;
@@ -403,18 +395,14 @@ h3 {
 		width: 4.13px;
 		height: 378px;
 	}
-
-
 	#ball__beauty {
 		position: absolute;
 		left: 10.93%;
 	}
 	#ball__beauty .ribbon {
 		width: 1.45px;
-		height: 139px;
+		height: 170px;
 	}
-
-
 	#ball__family {
 		position: absolute;
 		left: 50.13%;
@@ -423,18 +411,14 @@ h3 {
 		width: 4.13px;
 		height: 400px;
 	}
-
-
 	#ball__sport {
 		position: absolute;
 		left: 70.13%;
 	}
 	#ball__sport .ribbon {
 		width: 4.13px;
-		height: 144px;
+		height: 170px;
 	}
-
-
 	#ball__hobby {
 		position: absolute;
 		left: 6.13%;
@@ -443,8 +427,6 @@ h3 {
 		width: 4.13px;
 		height: 332px;
 	}
-
-
 	#ball__health {
 		position: absolute;
 		left: 19.2%;
@@ -453,15 +435,13 @@ h3 {
 		width: 4.13px;
 		height: 231px;
 	}
-
-
 	#ball__tourism {
 		position: absolute;
 		left: 30.13%;
 	}
 	#ball__tourism .ribbon {
 		width: 4.13px;
-		height: 134px;
+		height: 170px;
 	}
 }
 @media (max-width: 1220px){
@@ -519,6 +499,18 @@ h3 {
 	}
 	#products{
 		height: 100px;
+	}
+	#ball__beauty .ribbon {
+		width: 1.45px;
+		height: 140px;
+	}
+	#ball__sport .ribbon {
+		width: 4.13px;
+		height: 144px;
+	}
+	#ball__tourism .ribbon {
+		width: 4.13px;
+		height: 140px;
 	}
 }
 
