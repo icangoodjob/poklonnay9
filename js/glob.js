@@ -122,28 +122,28 @@ const pageScrollTwo = () => {
         }
     }) 
 }
-function bodyBlock() {
-    const pageBtn = document.querySelectorAll('.about');
-    const pageDownWr = document.querySelector('.maindetailswrapper');
-    if (window.innerWidth <= 1024) {
-        document.body.style.overflow = 'hidden';
-        pageBtn.forEach((item, i) => {
-            item.addEventListener('click', () => {
-                if(i == 0) {
-                    document.body.style.overflow = 'hidden auto';
-                } else {
-                    document.body.style.overflow = 'hidden';
-                } 
-            })
-        })
-        if (pageDownWr.classList.contains('animate__fadeInUp')) {
-            document.body.style.overflow = 'hidden auto';
-        } else {
-            document.body.style.overflow = 'hidden';
-        }
-    }
-}
-bodyBlock();
+// function bodyBlock() {
+//     const pageBtn = document.querySelectorAll('.about');
+//     const pageDownWr = document.querySelector('.maindetailswrapper');
+//     if (window.innerWidth <= 1024) {
+//         document.body.style.overflow = 'hidden';
+//         pageBtn.forEach((item, i) => {
+//             item.addEventListener('click', () => {
+//                 if(i == 0) {
+//                     document.body.style.overflow = 'hidden auto';
+//                 } else {
+//                     document.body.style.overflow = 'hidden';
+//                 } 
+//             })
+//         })
+//         if (pageDownWr.classList.contains('animate__fadeInUp')) {
+//             document.body.style.overflow = 'hidden auto';
+//         } else {
+//             document.body.style.overflow = 'hidden';
+//         }
+//     }
+// }
+// bodyBlock();
 pageScrollTwo();
 socialHiddenMin();
 pageHidden();

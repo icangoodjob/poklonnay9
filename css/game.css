@@ -50,6 +50,7 @@ button {
 	text-transform: uppercase;
 	/*margin: 0 20px;*/
 	grid-area: "t";
+	z-index: 10;
 }
 .blockoff {
 	display: none;
@@ -79,6 +80,7 @@ button {
 	align-items: center;
 	border: 0;
 	cursor: pointer;
+	z-index: 10;
 }
 .btn__generate p {
 	font-family: 'Futura PT', sans-serif;
@@ -262,7 +264,6 @@ h3 {
 	height: 470px;
 }
 
-
 #ball__beauty {
 	position: absolute;
 	left: 48.63%;
@@ -274,7 +275,6 @@ h3 {
 	width: 4.13px;
 	height: 169px;
 }
-
 
 #ball__family {
 	position: absolute;
@@ -288,7 +288,6 @@ h3 {
 	height: 367px;
 }
 
-
 #ball__sport {
 	position: absolute;
 	left: 62%;
@@ -301,7 +300,6 @@ h3 {
 	height: 209px;
 }
 
-
 #ball__hobby {
 	position: absolute;
 	left: 67.75%;
@@ -313,7 +311,6 @@ h3 {
 	width: 4.13px;
 	height: 459px;
 }
-
 
 #ball__health {
 	position: absolute;
@@ -414,7 +411,7 @@ h3 {
 	}
 	#ball__beauty .ribbon {
 		width: 1.45px;
-		height: 149px;
+		height: 139px;
 	}
 
 
