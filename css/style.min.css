@@ -719,7 +719,6 @@ body .ya-share2__badge {
   }
 }
 .maindetailswrapper {
-  min-height: 100vh;
   display: none;
 }
 .maindetails {
