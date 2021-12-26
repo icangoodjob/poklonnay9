@@ -147,6 +147,7 @@ button {
 	text-align: center;
 	z-index: 200;
 	cursor: pointer;
+	overflow: hidden;
 }
 button:active, button:focus {
   outline: none;
