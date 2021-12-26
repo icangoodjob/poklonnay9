@@ -91,8 +91,6 @@ window.addEventListener('DOMContentLoaded', () => {
         if(i == 0){
           mainContentHeader.classList.remove('animate__backInLeft');
           mainContentDescr.classList.remove('animate__backInRight');
-          mainDetailsContentHeader.classList.add('animate__backInLeft');
-          mainDetailsContentImg.classList.add('animate__backInRight');
           pageDownShare.classList.add('animate__zoomIn');
           pageUpWr.style.display = 'none';
           pageDownWr.style.display = 'block';
@@ -120,13 +118,13 @@ window.addEventListener('DOMContentLoaded', () => {
     const mainDetailsContentHeader = document.querySelector('.maindetails_content_descr');
     const mainDetailsContentImg = document.querySelector('.maindetails_content_img');
     document.addEventListener('wheel', (e) => {
-      if (e.deltaY < 0){
+      if (e.deltaY < 0 && window.scrollY <= 0){
         pageUpWr.style.display = 'block';
         pageDownWr.style.display = 'none';
         mainContentHeader.classList.add('animate__fadeInLeft');
         mainContentDescr.classList.add('animate__zoomIn');
       }
-      if (e.deltaY > 0){
+      if (e.deltaY > 0 && window.scrollY <= 0){
         pageUpWr.style.display = 'none';
         pageDownWr.style.display = 'block';
         pageDownWr.classList.add('animate__fadeInUp');
@@ -135,7 +133,7 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden';
         setTimeout(function(){
           document.body.style.overflow = 'hidden auto';
-        }, 500)
+        }, 300)
       }
     }) 
   }

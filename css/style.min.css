@@ -2116,9 +2116,15 @@ body .ya-share2__badge {
 }
 @media (max-width: 1440px) {
   .beauty_content {
-    margin: 10% 0 0px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 458px;
+    height: 776px;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, 0%);
+    margin: 195px 0 0px 0;
     padding: 0 0 100px;
-    flex-direction: row-reverse;
   }
   .beauty_content-descr {
     width: 458px;
@@ -2204,26 +2210,14 @@ body .ya-share2__badge {
     justify-content: center;
   }
 }
-@media (max-width: 1200px) {
-  .beauty_content {
-    flex-direction: column;
-    align-items: flex-start;
-    width: 458px;
-    height: 776px;
-    left: 50%;
-    top: 0%;
-    transform: translate(-50%, 0%);
-    margin: 150px 0 0px 0;
-    padding: 0 0 100px;
-  }
-}
 @media (max-width: 767px) {
   .beauty_content {
+    margin: 87px 0 0;
     width: 335px;
     height: 478px;
     left: 50%;
-/*    top: 50%;
-    transform: translate(-50%, -50%);*/
+    top: 0%;
+    transform: translate(-50%, 0%);
   }
   .beauty_content-descr {
     width: 335px;

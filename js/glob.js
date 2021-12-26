@@ -103,13 +103,13 @@ const pageScrollTwo = () => {
     const mainDetailsContentHeader = document.querySelector('.maindetails_content_descr');
     const mainDetailsContentImg = document.querySelector('.maindetails_content_img');
     document.addEventListener('wheel', (e) => {
-        if (e.deltaY < 0){
+        if (e.deltaY < 0 && window.scrollY <= 0){
             pageUpWr.style.display = 'block';
             pageDownWr.style.display = 'none';
             mainContentHeader.classList.add('animate__fadeInLeft');
             mainContentDescr.classList.add('animate__zoomIn');
         }
-        if (e.deltaY > 0){
+        if (e.deltaY > 0 && window.scrollY <= 0){
             pageUpWr.style.display = 'none';
             pageDownWr.style.display = 'block';
             pageDownWr.classList.add('animate__fadeInUp');
@@ -118,7 +118,7 @@ const pageScrollTwo = () => {
             document.body.style.overflow = 'hidden';
             setTimeout(function(){
                 document.body.style.overflow = 'hidden auto';
-            }, 500)
+            }, 300)
         }
     }) 
 }
