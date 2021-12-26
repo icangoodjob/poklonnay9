@@ -57,13 +57,6 @@ const pageHidden = () => {
                 pageDownWr.style.display = 'none';
                 window.scrollTo(0, 0);
             }
-            window.addEventListener('scroll', function(){
-                if (window.pageYOffset == 0 && window.innerWidth <= 1024) {
-                    pageUp.classList.add('animate__backInDown');
-                    pageDown.classList.remove('animate__fadeInUp');
-                    pageUpWr.style.display = 'block';
-                }
-            })
         })
     })
 }
@@ -89,7 +82,6 @@ const pageHiddenAll = () => {
                 pageDownWr.style.display = 'block';
                 window.scrollBy(0, 1);
             } else if (i == 1){
-                mainContentHeader.classList.add('animate__backInLeft');
                 mainContentDescr.classList.add('animate__backInRight');
                 mainDetailsContentHeader.classList.remove('animate__backInLeft');
                 mainDetailsContentImg.classList.remove('animate__backInRight');
@@ -123,24 +115,12 @@ const pageScrollTwo = () => {
             pageDownWr.classList.add('animate__fadeInUp');
             mainContentHeader.classList.remove('animate__fadeInLeft');
             mainContentDescr.classList.remove('animate__zoomIn');
-        }
-        if (pageUpWr.style.display = 'none') {
             document.body.style.overflow = 'hidden';
             setTimeout(function(){
                 document.body.style.overflow = 'hidden auto';
             }, 500)
         }
     }) 
-    document.addEventListener('scroll', function(){
-        console.log(pageYOffset);
-        if (pageUpWr.style.display = 'none' && pageYOffset == 0) {
-            pageDownWr.style.display = 'block';
-            // document.body.style.overflow = 'hidden';
-            // setTimeout(function(){
-            //     document.body.style.overflow = 'hidden auto';
-            // }, 400)
-        }
-    })
 }
 function bodyBlock() {
     const pageBtn = document.querySelectorAll('.about');

@@ -225,14 +225,14 @@ p {
     width: 44px;
     height: 44px;
   }
-  .special {
+/*  .special {
     top: 37px;
     right: 74px;
   }
   .lenta-img {
     right: 74px;
     top: 44px;
-  }
+  }*/
 }
 @media (max-width: 768px) {
   h1 {
@@ -248,7 +248,7 @@ p {
   }
   .lenta-img {
     right: 20px;
-    top: 22px;
+    top: 23px;
     width: 64px;
     height: 11px;
     background-image: url(../icons/lenta-vectormin.svg);
@@ -309,6 +309,7 @@ body .ya-share2__badge {
 }
 .mainwrapper {
   background-color: #0000;
+  overflow-x: hidden;
 }
 .main {
   width: 100vw;
