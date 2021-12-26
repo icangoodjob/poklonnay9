@@ -26,6 +26,9 @@ window.addEventListener('DOMContentLoaded', () => {
       social.style.display = "none";
       document.body.style.overflow = "";
     });
+    block.addEventListener('click', () => {
+     block.stopPropagation();
+   });
   };
   const socialHiddenMin = () => {
     const btnSoc = document.querySelectorAll('.share');
