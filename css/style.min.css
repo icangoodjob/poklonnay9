@@ -57,7 +57,10 @@ body {
   background-image: url(../icons/poklonnay-min3.svg);
   background-repeat: no-repeat;
   height: 24px;
+  width: 222px;
   z-index: 10;
+  display: flex;
+  justify-content: flex-start;
 }
 .maindetailswrapper .special,
 .mainwrapper .special {
@@ -249,6 +252,7 @@ p {
     top: 18px;
     left: 20px;
     background-image: url(../icons/poklonnay-min2.svg);
+    width: 145px
   }
   .maindetailswrapper .special,
   .mainwrapper .special{
@@ -319,6 +323,7 @@ body .ya-share2__badge {
 .mainwrapper {
   background-color: #0000;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 .main {
   width: 100vw;
@@ -706,7 +711,7 @@ body .ya-share2__badge {
   }
 }
 .maindetailswrapper {
-  height: 100vh;
+  min-height: 100vh;
   display: none;
 }
 .maindetails {
