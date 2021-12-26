@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-96x96.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/game.css">
+	<link rel="preload" href="./img/ball_choice.png" as="image"> 
+	<title>Game Page</title>
+</head>
+<style>
+	body{
+		overflow-x: hidden;
+	}
+	.header__title{
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+<body>
+	<section id="products">
+		<div class="bg__header"></div>
+		<div class="header">
+			<div class="special"></div>
+			<p class="header__title">выберите три сферы жизни, а мы заглянем в вашу новую реальность.</p>
+			<a href="https://www.lenta.ru"><img class="lenta-img" src="icons/lenta-vector.svg" alt=""></a>
+		</div>
+
+	</section>
+
+	<section class="game">
+		<div class="christmas__ball big behind" id="ball__love">
+			<div class="ribbon"></div>
+			<button onclick="choiceLove()" class="ball ball__yellow"><h3>любовь</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small" id="ball__career">
+			<div class="ribbon"></div>
+			<button onclick="choiceCareer()" class="ball ball__orange"><h3>карьера</h3></button>
+			<div class="ball__head"></div>
+		</div>	
+
+		<div class="christmas__ball small behind" id="ball__energe">
+			<div class="ribbon"></div>
+			<button onclick="choiceEnerge()" class="ball ball__orange"><h3>энергия</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball big" id="ball__family">
+			<div class="ribbon"></div>
+			<button onclick="choiceFamily()" class="ball ball__yellow"><h3>семья</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball big" id="ball__money">
+			<div class="ribbon"></div>
+			<button onclick="choiceMoney()" class="ball ball__orange"><h3>деньги</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small" id="ball__sport">
+			<div class="ribbon"></div>
+			<button onclick="choiceSport()" class="ball ball__orange"><h3>спорт</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small behind" id="ball__hobby">
+			<div class="ribbon"></div>
+			<button onclick="choiceHobby()" class="ball ball__yellow"><h3>хобби</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small" id="ball__beauty">
+			<div class="ribbon"></div>
+			<button onclick="choiceBeauty()" class="ball ball__yellow"><h3>красота</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball big behind" id="ball__health">
+			<div class="ribbon"></div>
+			<button onclick="choiceHealth()" class="ball ball__orange"><h3>здоровье</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small" id="ball__tourism">
+			<div class="ribbon"></div>
+			<button onclick="choiceTourism()" class="ball ball__orange"><h3>туризм</h3></button>
+			<div class="ball__head"></div>
+		</div>
+
+		<div class="christmas__ball small behind" id="ball__home">
+			<div class="ribbon"></div>
+			<button onclick="choiceHome()" class="ball ball__yellow"><h3>дом</h3></button>
+			<div class="ball__head"></div>
+		</div>
+	</section>
+
+	<section>
+		<button onclick="predict()" class="btn__generate disabled" id="btn__generate" disabled><p>Сгенерировать новую реальность</p></button>
+	</section>
+
+	<script type="text/javascript" src="js/ball.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88014128-40"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		setTimeout(function(){
+			gtag('event', location.pathname, {
+				'event_category': 'Не отказ'
+			});
+		}, 10000);
+		gtag('config', 'UA-88014128-40');
+	</script>
+
+</body>
+</html>
