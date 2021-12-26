@@ -65,7 +65,7 @@ body {
 }
 .share {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 104px;
   bottom: 34px;
   width: 48px;
