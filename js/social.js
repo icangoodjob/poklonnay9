@@ -16,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = "hidden";
       }
     });
-    
     close.addEventListener('click', () => {
       social.style.display = "none";
       document.body.style.overflow = "";
@@ -26,8 +25,8 @@ window.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = "";
     });
     block.addEventListener('click', (event) => {
-     event.stopPropagation();
-   });
+      event.stopPropagation();
+    });
   };
   const socialHiddenMin = () => {
     const btnSoc = document.querySelectorAll('.share');
