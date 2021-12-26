@@ -18,6 +18,21 @@
 button{
   outline: none;
 }
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  background: none;
+}
+::-webkit-scrollbar-thumb{
+  width: 0;
+  height: 0;
+  background: none;
+}
+::-webkit-scrollbar-track{
+  width: 0;
+  height: 0;
+  background: none;
+}
 body {
   height: 100vh;
   margin: 0;
@@ -83,7 +98,7 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  z-index: 0;
+  z-index: 3;
 }
 .about_circle {
   width: 93px;
@@ -682,6 +697,7 @@ body .ya-share2__badge {
 }
 .maindetailswrapper {
   height: 100vh;
+  display: none;
 }
 .maindetails {
   width: 100vw;
@@ -2310,6 +2326,7 @@ body .ya-share2__badge {
     bottom: 10px;
     right: 26px;
     justify-content: flex-end;
+    min-height: 20px;
   }
 }
 
@@ -2317,11 +2334,6 @@ body .ya-share2__badge {
   justify-content: flex-end;
 }
 
-@media (max-width: 767px) {
-  .main {
-    height: 91vh;
-  }
-}
 
 @media (max-width: 767px) {
   .beauty .social {

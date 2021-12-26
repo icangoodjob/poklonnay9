@@ -26,8 +26,8 @@ window.addEventListener('DOMContentLoaded', () => {
       social.style.display = "none";
       document.body.style.overflow = "";
     });
-    block.addEventListener('click', () => {
-     block.stopPropagation();
+    block.addEventListener('click', (event) => {
+     event.stopPropagation();
    });
   };
   const socialHiddenMin = () => {

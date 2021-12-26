@@ -124,11 +124,21 @@ const pageScrollTwo = () => {
             mainContentHeader.classList.remove('animate__fadeInLeft');
             mainContentDescr.classList.remove('animate__zoomIn');
         }
+        if (pageUpWr.style.display = 'none') {
+            document.body.style.overflow = 'hidden';
+            setTimeout(function(){
+                document.body.style.overflow = 'hidden auto';
+            }, 500)
+        }
     }) 
     document.addEventListener('scroll', function(){
         console.log(pageYOffset);
         if (pageUpWr.style.display = 'none' && pageYOffset == 0) {
-            pageDownWr.style.display = 'none';
+            pageDownWr.style.display = 'block';
+            // document.body.style.overflow = 'hidden';
+            // setTimeout(function(){
+            //     document.body.style.overflow = 'hidden auto';
+            // }, 400)
         }
     })
 }
