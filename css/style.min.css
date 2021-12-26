@@ -2051,6 +2051,8 @@ body .ya-share2__badge {
   height: 97px;
   bottom: 34px;
   align-items: center;
+  position: absolute;
+  min-height: 20px;
 }
 .beautydetails .about_circle {
   transform: rotate(180deg);
@@ -2159,6 +2161,10 @@ body .ya-share2__badge {
     left: 74px;
     width: 44px;
     height: 44px;
+  }
+  .beautydetails .about{
+    bottom: 90px;
+    height: auto
   }
   .beautydetails .special {
     top: 37px;
