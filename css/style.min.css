@@ -1968,13 +1968,26 @@ body .ya-share2__badge {
   height: 179px;
 }
 .beauty .social {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s linear;
+}
+.beauty .social.active {
+  opacity: 1;
+  visibility: visible;
+  transition: .5s linear;
+}
+.beauty .social.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s linear;
 }
 .beauty .social_block {
   position: relative;
@@ -1989,8 +2002,22 @@ body .ya-share2__badge {
   flex-direction: column;
   left: 50%;
   top: 50%;
+  z-index: 1000;
   transform: translate(-50%, -50%);
   background-image: url(../img/social-fon.svg);
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s linear;
+}
+.beauty .social_block.active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s linear;
+}
+.beauty .social_block.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s linear;
 }
 .beauty .social_block_descr {
   width: 460px;
