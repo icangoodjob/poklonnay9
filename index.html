@@ -49,7 +49,7 @@
     $share_img='https://poklonnaya9.lenta.ru/images/share/mainpage.jpg';
     $share_url='https://poklonnaya9.lenta.ru';
   }
-
+  
 ?>
 
 <!DOCTYPE html>
@@ -78,7 +78,7 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <link rel="stylesheet" href="css/style.min.css" />
-  <script src="https://yastatic.net/share2/share.js" defer="defer"></script>
+  <script src="https://yastatic.net/share2/share.js"></script>
 </head>
 <body>
   <style>
@@ -97,13 +97,12 @@
       autoplay
       loop
       muted
-      playsinline
       poster="img/video_poster.jpg"
       >
       <source src="img/lights.mp4" type="video/mp4" />
     </video>
     <div class="special"><p>Спецпроект</p></div>
-    <a href="https://www.lenta.ru" target="_blank"><img class="lenta lenta-img" src="icons/lenta-vector.svg" alt=""></a>
+    <a class="ev_logo_lenta" href="https://www.lenta.ru"><img class="lenta lenta-img" src="icons/lenta-vector.svg" alt=""></a>
     <div class="share animate__animated">
       <div class="share-heart">
         <img src="icons/heart.svg" alt="социальные сети" />
@@ -111,7 +110,7 @@
     </div>
     <div class="social_min animate__animated animate__backInDown">
       <div class="social_min_box">
-
+        
         <div class="popup__items">
           <a
           class="twitter"
@@ -146,7 +145,7 @@
           ></a>
         </div>
         <div
-        class="ya-share2"
+        class="ya-share2 ev_ya_share_1"
         data-size="m"
         data-title="СБУДУТСЯ ЛИ ВАШИ МЕЧТЫ В 2022 ГОДУ?"
         data-image="<?=$share_img?>"
@@ -178,7 +177,7 @@
           наступающим!
         </p>
       </div>
-      <a href="ball.html" class="button animate__animated"><p>НАЧАТЬ</p></a>
+      <a href="ball.html" class="button animate__animated ev_btn_Nachat"><p>НАЧАТЬ</p></a>
     </div>
   </div>
 </section>
@@ -186,8 +185,8 @@
 
 <section class="maindetailswrapper animate__animated anchor" id="down">
   <div class="header">
-    <a href="https://poklonnaya9.lenta.ru" class="special" target="_self"></a>
-    <a href="https://www.lenta.ru" target="_blank"><img class="lenta lenta-img" src="icons/lenta-vector.svg" alt=""></a>
+    <div class="special"></div>
+    <a class="ev_logo_lenta" href="https://www.lenta.ru"><img class="lenta lenta-img" src="icons/lenta-vector.svg" alt=""></a>
   </div>
   <div class="beautydetails">
     <div class="share animate__animated">
@@ -231,7 +230,7 @@
           ></a>
         </div>
         <div
-        class="ya-share2"
+        class="ya-share2 ev_ya_share_2"
         data-size="m"
         data-title="СБУДУТСЯ ЛИ ВАШИ МЕЧТЫ В 2022 ГОДУ?"
         data-image="<?=$share_img?>"
@@ -264,7 +263,7 @@
           «Поклонная 9» — место, где хочется жить. Место, которое не хочется
           покидать!
         </h2>
-        <a href="https://p9.moscow/" target="_blank" class="button"><p>ПОДРОБНЕЕ</p></a>
+        <a href="https://p9.moscow/" target="_blank" class="button ev_btn_Podrobnee"><p>ПОДРОБНЕЕ</p></a>
       </div>
       <div class="beautydetails_content_img animate__animated">
         <picture><source srcset="img/fasad.png" media="(min-width: 1441px)">
@@ -354,85 +353,73 @@
       <img src="//counter.rambler.ru/top100.cnt?pid=7498877" alt="Топ-100" />
     </noscript>
     <!-- END Top100 (Kraken) Counter -->
-  <script>
-  function events() {
-    if (!gtag) {
-      return false;
-    }
-    const isMobile = window.innerWidth <= 768 ? true : false;
 
-    //share_result
-    const ev_share_result = document.querySelector(".ev_share_result");
-    if (ev_share_result) {
-      ev_share_result.addEventListener("click", (e) => {
-        gtag('event', 'share_result');
-      });
-    }
-
-    //custom sharing
-    const ev_ya_share_1 = document.querySelector('.ev_ya_share_1');
-    const ya_share1 = Ya.share2(ev_ya_share_1, {
-      hooks: {
-        onshare: function (name) {
-          console.log(name);
-          switch (name) {
-            case 'vkontakte': {gtag('event', 'r_sh_vk'); break;}
-            case 'odnoklassniki': {gtag('event', 'r_sh_ok'); break;}
-            case 'twitter': {gtag('event', 'r_sh_tw'); break;}
-            case 'facebook': {gtag('event', 'r_sh_fb'); break;}
-          } 
+    <script>
+      function events() {
+        if (!gtag) {
+          return false;
         }
-      },
-    });
+        const isMobile = window.innerWidth <= 768 ? true : false;
+        console.log(isMobile);
 
-    //global sharing
-    const ev_ya_share_2 = document.querySelector('.ev_ya_share_2');
-    const ya_share2 = Ya.share2(ev_ya_share_2, {
-      hooks: {
-        onshare: function (name) {
-          console.log(name);
-          switch (name) {
-            case 'vkontakte': {gtag('event', 'sh_vk'); break;}
-            case 'odnoklassniki': {gtag('event', 'sh_ok'); break;}
-            case 'twitter': {gtag('event', 'sh_tw'); break;}
-            case 'facebook': {gtag('event', 'sh_fb'); break;}
-          } 
+        //logo_lenta
+        const ev_logo_lenta = document.querySelectorAll(".ev_logo_lenta");
+        if (ev_logo_lenta) {
+          ev_logo_lenta.forEach( (item) => {
+            item.addEventListener("click", (e) => {
+              gtag('event', 'logo_lenta');
+            });
+          } );
         }
-      },
-    });
 
-    //logo_lenta
-    const ev_logo_lenta = document.querySelectorAll(".ev_logo_lenta");
-    if (ev_logo_lenta) {
-      ev_logo_lenta.forEach( (item) => {
-        item.addEventListener("click", (e) => {
-          gtag('event', 'logo_lenta');
-        });
-      } );
-    }
+        //btn_Nachat
+        const ev_btn_Nachat = document.querySelector(".ev_btn_Nachat");
+        if (ev_btn_Nachat) {
+          ev_btn_Nachat.addEventListener("click", (e) => {
+            gtag('event', 'btn_Nachat');
+          });
+        }
 
-    //logo_poklonaya
-    const ev_logo_poklonaya = document.querySelectorAll(".ev_logo_poklonaya");
-    if (ev_logo_poklonaya) {
-      ev_logo_poklonaya.forEach( (item) => {
-        item.addEventListener("click", (e) => {
-          gtag('event', 'logo_poklonaya');
-        });
-      } );
-    }
-
-    //btn_Podrobnee
-    const ev_btn_Podrobnee = document.querySelector(".ev_btn_Podrobnee");
-    if (ev_btn_Podrobnee) {
-      ev_btn_Podrobnee.addEventListener("click", (e) => {
-        gtag('event', 'btn_Podrobnee');
+        //btn_Podrobnee
+        const ev_btn_Podrobnee = document.querySelector(".ev_btn_Podrobnee");
+        if (ev_btn_Podrobnee) {
+          ev_btn_Podrobnee.addEventListener("click", (e) => {
+            gtag('event', 'btn_Podrobnee');
+            
+          });
+        }
         
-      });
-    }
-    
-  }
+        //global sharing
+        const ev_ya_share_1 = document.querySelector('.ev_ya_share_1');
+        const ya_share1 = Ya.share2(ev_ya_share_1, {
+          hooks: {
+            onshare: function (name) {
+              switch (name) {
+                case 'vkontakte': {gtag('event', 'sh_vk'); break;}
+                case 'odnoklassniki': {gtag('event', 'sh_ok'); break;}
+                case 'twitter': {gtag('event', 'sh_tw'); break;}
+                case 'facebook': {gtag('event', 'sh_fb'); break;}
+              } 
+            }
+          },
+        });
 
-  events();
-</script>
+        const ev_ya_share_2 = document.querySelector('.ev_ya_share_2');
+        const ya_share2 = Ya.share2(ev_ya_share_2, {
+          hooks: {
+            onshare: function (name) {
+              switch (name) {
+                case 'vkontakte': {gtag('event', 'sh_vk'); break;}
+                case 'odnoklassniki': {gtag('event', 'sh_ok'); break;}
+                case 'twitter': {gtag('event', 'sh_tw'); break;}
+                case 'facebook': {gtag('event', 'sh_fb'); break;}
+              } 
+            }
+          },
+        });
+      }
+
+      events();
+    </script>
   </body>
   </html>
