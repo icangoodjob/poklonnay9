@@ -35,22 +35,22 @@ window.addEventListener('DOMContentLoaded', () => {
     const close = document.querySelectorAll('.cross_min');
     btnSoc.forEach((item, i) => {
       item.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.stopPropagation();
         if(social[i].style.display == 'block'){
           social[i].style.display = 'none';
         } else {
           social[i].style.display = 'block';
         }
       })
+      document.addEventListener('click', function(e){
+        social[i].style.display = 'none';
+        document.body.style.overflow = '';
+      })
     })
     close.forEach((item, i) => {
       item.addEventListener('click', () => {
         social[i].style.display = "none";
       });
-    });
-    document.addEventListener('click', function(e){
-      social[i].style.display = 'none';
-      document.body.style.overflow = '';
     });
   };
 

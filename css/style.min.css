@@ -242,8 +242,8 @@ p {
     height: 44px;
   }
   .about {
-    width: 91px;
-    right: 69px;
+    width: auto;
+    right: 26px;
     bottom: 54px;
     min-height: 20px;
     height: auto;
@@ -337,7 +337,6 @@ body .ya-share2__badge {
 .mainwrapper {
   background-color: #0000;
   overflow-x: hidden;
-  min-height: 100vh;
 }
 .main {
   width: 100vw;
@@ -1919,6 +1918,12 @@ body .ya-share2__badge {
   background-repeat: no-repeat;
   background-position: 34% 7%;
 }
+@media (max-width: 767px){
+  .beauty{
+    height: 640px;
+    position: static;
+  }
+}
 .beauty_content {
   position: absolute;
   width: 954px;
@@ -2216,17 +2221,12 @@ body .ya-share2__badge {
     height: 44px;
   }
   .beautydetails .about {
-    width: 48px;
+    width: auto;
     height: auto;
     bottom: 40px;
     right: 26px;
   }
-  .beautydetails .social_min_box {
-    left: 50px;
-  }
-  .beautydetails .social_min{
-    bottom: 150px;
-  }
+
   .beautydetails .special {
     top: 37px;
     right: 74px;
@@ -2283,6 +2283,7 @@ body .ya-share2__badge {
     left: 50%;
     top: 0%;
     transform: translate(-50%, 0%);
+    padding: 0 0 50px;
   }
   .beauty_content-descr {
     width: 335px;
