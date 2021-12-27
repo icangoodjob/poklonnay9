@@ -288,6 +288,85 @@
   <img src="//counter.rambler.ru/top100.cnt?pid=7498877" alt="Топ-100" />
 </noscript>
 <!-- END Top100 (Kraken) Counter -->
+<script>
+  function events() {
+    if (!gtag) {
+      return false;
+    }
+    const isMobile = window.innerWidth <= 768 ? true : false;
 
+    //share_result
+    const ev_share_result = document.querySelector(".ev_share_result");
+    if (ev_share_result) {
+      ev_share_result.addEventListener("click", (e) => {
+        gtag('event', 'share_result');
+      });
+    }
+
+    //custom sharing
+    const ev_ya_share_1 = document.querySelector('.ev_ya_share_1');
+    const ya_share1 = Ya.share2(ev_ya_share_1, {
+      hooks: {
+        onshare: function (name) {
+          console.log(name);
+          switch (name) {
+            case 'vkontakte': {gtag('event', 'r_sh_vk'); break;}
+            case 'odnoklassniki': {gtag('event', 'r_sh_ok'); break;}
+            case 'twitter': {gtag('event', 'r_sh_tw'); break;}
+            case 'facebook': {gtag('event', 'r_sh_fb'); break;}
+          } 
+        }
+      },
+    });
+
+    //global sharing
+    const ev_ya_share_2 = document.querySelector('.ev_ya_share_2');
+    const ya_share2 = Ya.share2(ev_ya_share_2, {
+      hooks: {
+        onshare: function (name) {
+          console.log(name);
+          switch (name) {
+            case 'vkontakte': {gtag('event', 'sh_vk'); break;}
+            case 'odnoklassniki': {gtag('event', 'sh_ok'); break;}
+            case 'twitter': {gtag('event', 'sh_tw'); break;}
+            case 'facebook': {gtag('event', 'sh_fb'); break;}
+          } 
+        }
+      },
+    });
+
+    //logo_lenta
+    const ev_logo_lenta = document.querySelectorAll(".ev_logo_lenta");
+    if (ev_logo_lenta) {
+      ev_logo_lenta.forEach( (item) => {
+        item.addEventListener("click", (e) => {
+          gtag('event', 'logo_lenta');
+        });
+      } );
+    }
+
+    //logo_poklonaya
+    const ev_logo_poklonaya = document.querySelectorAll(".ev_logo_poklonaya");
+    if (ev_logo_poklonaya) {
+      ev_logo_poklonaya.forEach( (item) => {
+        item.addEventListener("click", (e) => {
+          gtag('event', 'logo_poklonaya');
+        });
+      } );
+    }
+
+    //btn_Podrobnee
+    const ev_btn_Podrobnee = document.querySelector(".ev_btn_Podrobnee");
+    if (ev_btn_Podrobnee) {
+      ev_btn_Podrobnee.addEventListener("click", (e) => {
+        gtag('event', 'btn_Podrobnee');
+        
+      });
+    }
+    
+  }
+
+  events();
+</script>
 </body>
 </html>
