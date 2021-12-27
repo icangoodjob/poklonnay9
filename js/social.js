@@ -8,24 +8,25 @@ window.addEventListener('DOMContentLoaded', () => {
     const close = document.querySelector('.cross');
     
     btn.addEventListener('click', () => {
-      if(social.style.display == 'block'){
-        social.style.display = 'none';
-        document.body.style.overflow = "";
-      } else {
-        social.style.display = 'block';
-        document.body.style.overflow = "hidden";
-      }
+      block.classList.add('active');
+      block.classList.remove('hidden');
+      social.classList.add('active');
+      social.classList.remove('hidden');
+      document.body.style.overflow = "hidden";
     });
     close.addEventListener('click', () => {
-      social.style.display = "none";
+      block.classList.remove('active');
+      block.classList.add('hidden');
+      social.classList.add('hidden');
+      social.classList.remove('active');
       document.body.style.overflow = "";
     });
     social.addEventListener('click', () => {
-      social.style.display = "none";
+      social.classList.add('hidden');
+      social.classList.remove('active');
+      block.classList.add('hidden');
+      block.classList.remove('active');
       document.body.style.overflow = "";
-    });
-    block.addEventListener('click', (event) => {
-      event.stopPropagation();
     });
   };
   const socialHiddenMin = () => {
