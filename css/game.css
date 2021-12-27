@@ -39,10 +39,28 @@ button {
 	outline: none;
 }
 .link__lenta{
-	display: block;
 	cursor: pointer;
-	z-index: 11;
+	position: absolute;
+	right: 81px;
+	top: 36px;
+	width: 101px;
+	height: 17px;
+	cursor: pointer;
+	z-index: 10;
 }
+@media (max-width: 767px){
+	.link__lenta{
+		right: 21px;
+		top: 19px;
+		width: 64px;
+		height: auto;
+	}
+	.link__lenta img{
+		width: 100%;
+		height: 100%;
+	}
+}
+
 .bg__header {
 	position: absolute;
 	top: 0;

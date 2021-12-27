@@ -279,13 +279,7 @@ p {
     top: 18px;
     width: 145px
   }
-  .lenta-img {
-    right: 20px;
-    top: 25px;
-    width: 64px;
-    height: 11px;
-    background-image: url(../icons/lenta-vectormin.svg);
-  }
+
   .share {
     width: 44px;
     height: 44px;
