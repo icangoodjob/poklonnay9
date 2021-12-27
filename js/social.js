@@ -120,15 +120,11 @@ window.addEventListener('DOMContentLoaded', () => {
       if (e.deltaY < 0 && window.scrollY <= 0){
         pageUpWr.style.display = 'block';
         pageDownWr.style.display = 'none';
-        mainContentHeader.classList.add('animate__fadeInLeft');
-        mainContentDescr.classList.add('animate__zoomIn');
       }
       if (e.deltaY > 0 && window.scrollY <= 0){
         pageUpWr.style.display = 'none';
         pageDownWr.style.display = 'block';
         pageDownWr.classList.add('animate__fadeInUp');
-        mainContentHeader.classList.remove('animate__fadeInLeft');
-        mainContentDescr.classList.remove('animate__zoomIn');
         document.body.style.overflow = 'hidden';
         setTimeout(function(){
           document.body.style.overflow = 'hidden auto';
