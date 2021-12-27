@@ -90,6 +90,9 @@ body {
   cursor: pointer;
   z-index: 3;
 }
+.beautydetails .share{
+  position: absolute;
+}
 .share:hover {
   background-color: #ff6e00;
   transition: 1s;
@@ -244,7 +247,7 @@ p {
   .about {
     width: auto;
     right: 26px;
-    bottom: 54px;
+    bottom: 40px;
     min-height: 20px;
     height: auto;
   }
@@ -417,7 +420,6 @@ body .ya-share2__badge {
   left: 0;
   width: 100%;
   height: 88px;
-  z-index: 1001;
 }
 .main_content_header {
   width: 956px;
@@ -1919,11 +1921,11 @@ body .ya-share2__badge {
   background-position: 34% 7%;
 }
 @media (max-width: 767px){
-  .beauty{
-    height: 640px;
-    position: static;
+  .mainwrapper {
+    position: relative;
   }
 }
+
 .beauty_content {
   position: absolute;
   width: 954px;
@@ -2109,7 +2111,7 @@ body .ya-share2__badge {
   height: 97px;
   bottom: 34px;
   align-items: center;
-  position: absolute;
+  position: fixed;
   min-height: 20px;
 }
 .beautydetails .about_circle {
@@ -2219,6 +2221,7 @@ body .ya-share2__badge {
     /*left: 74px;*/
     width: 44px;
     height: 44px;
+    position: absolute;
   }
   .beautydetails .about {
     width: auto;
@@ -2401,11 +2404,6 @@ body .ya-share2__badge {
 }
 
 
-
-
-
-
-
 @media (max-width: 768px) {
   .beauty .social_block_descr {
     height: auto;
@@ -2430,10 +2428,6 @@ body .ya-share2__badge {
 
 
 @media (max-width: 767px) {
-  .beauty .social {
-    position: relative;
-    z-index: 1100;
-  }
   .beautydetails_content_descr .button{
     align-self: center;
   }
