@@ -203,6 +203,30 @@ function choiceTourism() {
 }
 
 function predict() {
-  var num = Math.ceil(Math.random()*2);
-  window.location.replace(String(url_list[selected[num]]));
+
+  function events() {
+    if (!gtag) {
+      return false;
+    }
+    const isMobile = window.innerWidth <= 768 ? true : false;
+
+    //btn_Sgenerirovat
+    const ev_btn_Sgenerirovat = document.querySelector("#btn__generate");
+    if (ev_btn_Sgenerirovat) {
+      ev_btn_Sgenerirovat.addEventListener("click", (e) => {
+        console.log("fire!!!");
+        gtag('event', 'btn_Sgenerirovat');
+      });
+    }
+    
+  }
+
+  events();
+
+  setTimeout(() => {
+    var num = Math.ceil(Math.random()*2);
+    window.location.replace(String(url_list[selected[num]]));
+  }, 1000);
+
+  
 }
