@@ -14,27 +14,35 @@ window.addEventListener('DOMContentLoaded', () => {
     const social = document.querySelectorAll('.social_min');
     const close = document.querySelectorAll('.cross_min');
     btnSoc.forEach((item, i) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
             if(social[i].style.display == 'block'){
                 social[i].style.display = 'none';
-                document.body.style.overflow = "";
+                // document.body.style.overflow = "";
             } else {
                 social[i].style.display = 'block';
-                document.body.style.overflow = "hidden";
+                // document.body.style.overflow = "hidden";
             }
         })
     })
     close.forEach((item, i) => {
         item.addEventListener('click', () => {
             social.forEach((item) => {item.style.display = "none";});
-            document.body.style.overflow = "";
+            // document.body.style.overflow = "";
         });
     }) 
     social.forEach((item) => {item.addEventListener("click", () => {
         social.forEach((item) => {item.style.display = "none";});
-        document.body.style.overflow = "";
-    });});  
+        // document.body.style.overflow = "";
+    });
+
+});
+    document.addEventListener('click', function(e){
+        social[i].style.display = 'none';
+        document.body.style.overflow = '';
+    });
 };
+
 const pageHidden = () => {
     const pageBtn = document.querySelectorAll('.about');
     const pageUp = document.getElementById('up');

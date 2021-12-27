@@ -241,6 +241,13 @@ p {
     width: 44px;
     height: 44px;
   }
+  .about {
+    width: 91px;
+    right: 69px;
+    bottom: 54px;
+    min-height: 20px;
+    height: auto;
+  }
 /*  .special {
     top: 37px;
     right: 74px;
@@ -654,7 +661,7 @@ body .ya-share2__badge {
     bottom: 122px;
   }
 }
-@media (max-width: 1440px) {
+/*@media (max-width: 1440px) {
   .social_min {
     height: 100%;
     width: 100vw;
@@ -689,6 +696,11 @@ body .ya-share2__badge {
     height: 12px;
     background-image: url(../img/cross.svg);
   }
+}*/
+@media (max-width: 1440px){
+  .social_min{
+    left: 30px;
+  }
 }
 @media (max-width: 768px) {
   .social_min {
@@ -702,6 +714,8 @@ body .ya-share2__badge {
   .social_min_box {
     margin: 0 auto;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 172px;
     height: 50px;
     left: 50%;
@@ -2141,7 +2155,7 @@ body .ya-share2__badge {
   width: 222px;
   height: 24px;
 }
-@media (max-width: 1151px) {
+@media (max-width: 1439px) {
   .beauty_content {
     flex-direction: column;
     align-items: flex-start;
@@ -2196,14 +2210,22 @@ body .ya-share2__badge {
     height: 1024px;
   }
   .beautydetails .share {
-    bottom: 90px;
-    left: 74px;
+    /*bottom: 90px;*/
+    /*left: 74px;*/
     width: 44px;
     height: 44px;
   }
-  .beautydetails .about{
-    bottom: 90px;
-    height: auto
+  .beautydetails .about {
+    width: 48px;
+    height: auto;
+    bottom: 40px;
+    right: 26px;
+  }
+  .beautydetails .social_min_box {
+    left: 50px;
+  }
+  .beautydetails .social_min{
+    bottom: 150px;
   }
   .beautydetails .special {
     top: 37px;
@@ -2235,6 +2257,22 @@ body .ya-share2__badge {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+@media (max-width: 768px){
+  .beautydetails .social_min_box {
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 172px;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 49px;
+  }
+  .beautydetails .social_min{
+    bottom: 0px;
   }
 }
 @media (max-width: 767px) {

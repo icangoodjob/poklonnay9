@@ -1,23 +1,73 @@
+<?
+
+  if(isset($_GET['love'])){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/love.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?love';
+  }
+  elseif($_GET['house']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/house.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?house';
+  }
+  elseif($_GET['career']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/career.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?career';
+  }
+  elseif($_GET['money']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/money.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?money';
+  }
+  elseif($_GET['energy']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/energy.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?energy';
+  }
+  elseif($_GET['beauty']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/beauty.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?beauty';
+  }
+  elseif($_GET['family']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/family.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?family';
+  }
+  elseif($_GET['sport']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/sport.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?sport';
+  }
+  elseif($_GET['hobby']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/hobby.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?hobby';
+  }
+  elseif($_GET['health']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/health.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?health';
+  }
+  elseif($_GET['travel']){
+    $share_img='https://poklonnaya9.lenta.ru/images/share/travel.jpg';
+    $share_url='https://poklonnaya9.lenta.ru/?travel';
+  }
+
+  else{
+    $share_img='https://poklonnaya9.lenta.ru/images/share/mainpage.jpg';
+    $share_url='https://poklonnaya9.lenta.ru';
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="https://poklonnaya9.lenta.ru" />
+  <meta property="og:url" content="<?=$share_url?>" />
   <meta property="og:title" content="СБУДУТСЯ ЛИ ВАШИ МЕЧТЫ В 2022 ГОДУ?" />
-  <meta
-  property="og:description"
-  content="Узнайте все тайны у цифрового оракула"
-  />
-  <meta property="og:description" content="Узнайте все тайны у цифрового оракула"/>
-  <meta
-  property="og:image"
-  content="https://poklonnaya9.lenta.ru/images/share/mainpage.jpg"
-  />
+  <meta property="og:description" content="Узнайте все тайны у цифрового оракула" />
+  <meta property="og:image" content="<?=$share_img?>" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
+
+
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-96x96.png">
@@ -64,7 +114,7 @@
         <div class="popup__items">
           <a
           class="twitter"
-          href="https://twitter.com/intent/tweet?refer_source=https://poklonnaya9.lenta.ru "
+          href="https://twitter.com/intent/tweet?refer_source=<?=$share_url?> "
           target="blank"
           ><div class="twitter_img"></div
           ></a>
@@ -72,7 +122,7 @@
         <div class="popup__items">
           <a
           class="ok"
-          href="https://connect.ok.ru/offer?url=URL_TO_SHAREhttps://poklonnaya9.lenta.ru "
+          href="https://connect.ok.ru/offer?url=<?=$share_url?> "
           target="blank"
           ><div class="ok_img"></div
           ></a>
@@ -80,8 +130,8 @@
         <div class="popup__items">
           <a
           class="vk"
-          href="https://vk.com/share.php?url=https://poklonnaya9.lenta.ru"
-          data-image="https://poklonnaya9.lenta.ru/images/share/mainpage.jpg"
+          href="https://vk.com/share.php?url=<?=$share_url?>"
+          data-image="<?=$share_img?>"
           target="blank"
           ><div class="vk_img"></div
           ></a>
@@ -89,7 +139,7 @@
         <div class="popup__items">
           <a
           class="facebook"
-          href="https://www.facebook.com/sharer/sharer.php?u=https://poklonnaya9.lenta.ru"
+          href="https://www.facebook.com/sharer/sharer.php?u=<?=$share_url?>"
           target="blank"
           ><div class="facebook_img"></div
           ></a>
@@ -98,8 +148,8 @@
         class="ya-share2"
         data-size="m"
         data-title="СБУДУТСЯ ЛИ ВАШИ МЕЧТЫ В 2022 ГОДУ?"
-        data-image="https://poklonnaya9.lenta.ru/images/share/mainpage.jpg"
-        data-url="https://poklonnaya9.lenta.ru"
+        data-image="<?=$share_img?>"
+        data-url="<?=$share_url?>"
         data-services="vkontakte,odnoklassniki,twitter,facebook"
         ></div>
 
@@ -149,7 +199,7 @@
         <div class="popup__items">
           <a
           class="twitter"
-          href="https://twitter.com/intent/tweet?refer_source=https://poklonnaya9.lenta.ru "
+          href="https://twitter.com/intent/tweet?refer_source=<?=$share_url?>"
           target="blank"
           ><div class="twitter_img"></div
           ></a>
@@ -157,7 +207,7 @@
         <div class="popup__items">
           <a
           class="ok"
-          href="https://connect.ok.ru/offer?url=URL_TO_SHAREhttps://poklonnaya9.lenta.ru "
+          href="https://connect.ok.ru/offer?url=<?=$share_url?>"
           target="blank"
           ><div class="ok_img"></div
           ></a>
@@ -165,8 +215,8 @@
         <div class="popup__items">
           <a
           class="vk"
-          href="https://vk.com/share.php?url=https://poklonnaya9.lenta.ru"
-          data-image="https://poklonnaya9.lenta.ru/images/share/mainpage.jpg"
+          href="https://vk.com/share.php?url=<?=$share_url?>"
+          data-image="<?=$share_img?>"
           target="blank"
           ><div class="vk_img"></div
           ></a>
@@ -174,7 +224,7 @@
         <div class="popup__items">
           <a
           class="facebook"
-          href="https://www.facebook.com/sharer/sharer.php?u=https://poklonnaya9.lenta.ru"
+          href="https://www.facebook.com/sharer/sharer.php?u=<?=$share_url?>"
           target="blank"
           ><div class="facebook_img"></div
           ></a>
@@ -183,8 +233,8 @@
         class="ya-share2"
         data-size="m"
         data-title="СБУДУТСЯ ЛИ ВАШИ МЕЧТЫ В 2022 ГОДУ?"
-        data-image="https://poklonnaya9.lenta.ru/images/share/mainpage.jpg"
-        data-url="https://poklonnaya9.lenta.ru"
+        data-image="<?=$share_img?>"
+        data-url="<?=$share_url?>"
         data-services="vkontakte,odnoklassniki,twitter,facebook"
         ></div>
       </div>
@@ -274,5 +324,34 @@
         />
       </div>
     </noscript>
+    <!-- Top100 (Kraken) Counter -->
+    <script>
+      (function (w, d, c) {
+        (w[c] = w[c] || []).push(function() {
+          var options = {
+            project: 7498877,
+          };
+          try {
+            w.top100Counter = new top100(options);
+          } catch(e) { }
+        });
+        var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src =
+        (d.location.protocol == "https:" ? "https:" : "http:") +
+        "//st.top100.ru/top100/top100.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+      })(window, document, "_top100q");
+    </script>
+    <noscript>
+      <img src="//counter.rambler.ru/top100.cnt?pid=7498877" alt="Топ-100" />
+    </noscript>
+    <!-- END Top100 (Kraken) Counter -->
   </body>
   </html>
