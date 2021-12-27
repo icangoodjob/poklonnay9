@@ -22,6 +22,9 @@
   -ms-tap-highlight-color: rgba(0, 0, 0, 0);
   tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a{
+  cursor: pointer;
+}
 button{
   outline: none;
 }
@@ -65,7 +68,7 @@ body {
   background-repeat: no-repeat;
   height: 24px;
   width: 222px;
-  z-index: 10;
+  z-index: 11;
   display: flex;
   justify-content: flex-start;
 }

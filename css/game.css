@@ -38,6 +38,11 @@ header {
 button {
 	outline: none;
 }
+.link__lenta{
+	display: block;
+	cursor: pointer;
+	z-index: 11;
+}
 .bg__header {
 	position: absolute;
 	top: 0;
