@@ -2224,7 +2224,7 @@ body .ya-share2__badge {
     left: 50%;
     top: 0%;
     transform: translate(-50%, 0%);
-    margin: 195px 0 0px 0;
+    margin: 150px 0 0px 0;
     padding: 0 0 100px;
   }
   .beauty_content-descr {
@@ -2279,6 +2279,12 @@ body .ya-share2__badge {
     right: 74px;
   }
   
+}
+@media (max-width: 768px){
+  .beautydetails .share,
+  .beautydetails .about {
+    bottom: 40px;
+  }
 }
 @media (max-width: 767px){
   .beautydetails .social_min_box {
@@ -2373,7 +2379,6 @@ body .ya-share2__badge {
   .beautydetails .about {
     width: 48px;
     height: 48px;
-    bottom: 40px;
     right: 26px;
   }
   .beautydetails .special,
@@ -2402,7 +2407,6 @@ body .ya-share2__badge {
     height: 324px;
   }
   .beautydetails .share {
-    bottom: 39px;
     left: 20px;
     width: 44px;
     height: 44px;
