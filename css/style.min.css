@@ -274,6 +274,13 @@ p {
     background-image: url(../icons/poklonnay-min2.svg);
     width: 145px
   }
+  .lenta-img {
+    right: 20px;
+    top: 25px;
+    width: 64px;
+    height: 11px;
+    background-image: url(../icons/lenta-vectormin.svg);
+  }
   .maindetailswrapper .special,
   .mainwrapper .special{
     top: 18px;
