@@ -276,14 +276,18 @@ p {
   }
   .lenta-img {
     right: 20px;
-    top: 25px;
+    top: 22px;
     width: 64px;
     height: 11px;
     background-image: url(../icons/lenta-vectormin.svg);
   }
+  .beauty .lenta-img,
+  .maindetailswrapper .lenta-img{
+    top: 19px;
+  }
   .maindetailswrapper .special,
   .mainwrapper .special{
-    top: 18px;
+    top: 15px;
     width: 145px
   }
 
@@ -550,13 +554,18 @@ body .ya-share2__badge {
 .social_min_box {
   position: absolute;
   bottom: 10px;
-  left: 0;
+  left: 2px;
   width: 37px;
   height: 172px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1440px){
+  .social_min_box{
+    left: -3px;
+  }
 }
 .social_min_box .popup__items {
   display: none;
