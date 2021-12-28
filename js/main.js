@@ -52,13 +52,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     //mainContentHeader.classList.add('animate__backInUp');
                     //mainDetailsContentDescr.classList.remove('animate__backInUp');
                     //mainDetailsContent.classList.remove('animate__backInUp');
-
                 }
             })
         })
-
-
-
     }
     const pageHiddenAll = () => {
         const pageBtn = document.querySelectorAll('.about');

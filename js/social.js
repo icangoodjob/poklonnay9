@@ -120,6 +120,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const mainContentDescr = document.querySelector('.main_content-descr');
     const mainDetailsContentHeader = document.querySelector('.maindetails_content_descr');
     const mainDetailsContentImg = document.querySelector('.maindetails_content_img');
+
+    // let bC = document.querySelector('.beauty-content');
+    // let bCposition = window.bC.scrollHeight;
+    // console.log(bCposition);
     document.addEventListener('wheel', (e) => {
       if (e.deltaY < 0 && window.scrollY <= 0){
         pageUpWr.style.display = 'block';
